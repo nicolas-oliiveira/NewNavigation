@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/firts_fragment">
+
+    <fragment
+        android:id="@+id/firts_fragment"
+        android:name="com.example.newnavigation.firts_fragment"
+        android:label="fragment_firts_fragment"
+        tools:layout="@layout/fragment_firts_fragment" >
+        <action
+            android:id="@+id/action_firts_fragment_to_second_fragment"
+            app:destination="@id/second_fragment" />
+        <action
+            android:id="@+id/action_firts_fragment_to_tree_fragment"
+            app:destination="@id/tree_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/second_fragment"
+        android:name="com.example.newnavigation.second_fragment"
+        android:label="fragment_second_fragment"
+        tools:layout="@layout/fragment_second_fragment" >
+        <action
+            android:id="@+id/action_second_fragment_to_for_fragment"
+            app:destination="@id/for_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tree_fragment"
+        android:name="com.example.newnavigation.tree_fragment"
+        android:label="fragment_tree_fragment"
+        tools:layout="@layout/fragment_tree_fragment" >
+        <action
+            android:id="@+id/action_tree_fragment_to_five_fragment"
+            app:destination="@id/five_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/for_fragment"
+        android:name="com.example.newnavigation.for_fragment"
+        android:label="fragment_for_fragment"
+        tools:layout="@layout/fragment_for_fragment" >
+        <action
+            android:id="@+id/action_for_fragment_to_six_fragment"
+            app:destination="@id/six_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/five_fragment"
+        android:name="com.example.newnavigation.five_fragment"
+        android:label="fragment_five_fragment"
+        tools:layout="@layout/fragment_five_fragment" >
+        <action
+            android:id="@+id/action_five_fragment_to_six_fragment"
+            app:destination="@id/six_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/six_fragment"
+        android:name="com.example.newnavigation.six_fragment"
+        android:label="fragment_six_fragment"
+        tools:layout="@layout/fragment_six_fragment" >
+        <action
+            android:id="@+id/action_six_fragment_to_firts_fragment"
+            app:destination="@id/firts_fragment" />
+    </fragment>
+</navigation>
